@@ -9,10 +9,21 @@
   <body>
     <form method="post" id="contact-form">
       <h2>Drop your Message</h2>
-      <input type="text" name="name" placeholder="Full Name" />
-      <input type="tel" name="phone" placeholder="Mobile Number" />
-      <input type="email" name="email" placeholder="email@example.com" />
-      <textarea name="message" placeholder="Your message"></textarea>
+      <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required
+        autofocus
+      />
+      <input type="tel" name="phone" placeholder="Mobile Number" required />
+      <input
+        type="email"
+        name="email"
+        placeholder="email@example.com"
+        required
+      />
+      <textarea name="message" placeholder="Your message" required></textarea>
       <button>Send</button>
     </form>
     <script>
