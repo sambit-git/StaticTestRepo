@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* overflow: hidden; */
+  background-color: rgb(245, 243, 242);
+}
+body,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+input,
+textarea {
+  padding: 0.5rem;
+  width: 100%;
+  z-index: 10;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  transition: 0.5s;
+  &:focus {
+    border-bottom: 1px solid #00f;
+  }
+}
+textarea {
+  resize: vertical;
+  height: 7rem;
+}
+h2 {
+  position: relative;
+}
+h2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4rem;
+  left: 0;
+  bottom: -4.5rem;
+  border-radius: 30%;
+  border-top: 3px solid salmon;
+  z-index: -1;
+}
