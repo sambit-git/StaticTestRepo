@@ -33,11 +33,15 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         const formData = new FormData(form);
+        const jsonData = {};
+        for (const [key, value] of formData) {
+          jsonData[key] = value;
+        }
         fetch(
           "https://test-backend-git-main-sambit-gits-projects.vercel.app/",
           {
             method: "POST",
-            body: formData,
+            body: jsonData,
             mode: "no-cors",
           }
         )
